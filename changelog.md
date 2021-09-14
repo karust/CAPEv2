@@ -1,3 +1,25 @@
+### [14-09-2021]
+* Update Lockbit yara sig
+* Update Bazar yara sig
+
+### [11-09-2021]
+* Monitor improvements: 
+    * Restrict debugger breakpoint protection to current process (NtSetContextThread)
+    * Limit "Dropped file limit reached" messages to just one per process
+
+### [02-09-2021]
+* Monitor fixes: 
+    * Some dropped files being missed (file_handle_terminate())
+    * Disable ntdll write-protection for Office processes
+
+### [06-09-2021]
+* Sflock update with more PE checks, as in many cases PE has other formats strings inside
+* __ACTION REQUIRED__
+    * `pip3 install -U sflock2`
+
+### [02-09-2021]
+* Monitor: Remove case-sensitivity from check for dll path (e.g. Hancitor maldoc-spawned dlls)
+
 ### [28-08-2021]
 * Monitor: revert changes to IsPeImageRaw() while crashes (e.g. BazarLoader) are investigated
 
